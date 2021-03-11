@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+    <button id="choi" type='button' name='name' value='button'>Chơi</button>
+
+</body>
+</html>
+<script>
+    play=document.getElementById("choi");
+    play.addEventListener("click",playgame);
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function playgame() {
+        let x = prompt("Nhập khoảng đoán từ ");
+        x=parseInt(x);
+        let y = prompt("đến");
+        y=parseInt(y);
+        let z=getRandomInt(x,y);
+
+        let b= prompt("nhập vào số đoán");
+        b=parseInt(b);
+
+        while (z!==b){
+            if (b<z) {
+                alert("Số bạn chọn bé hơn số đúng, Hãy chọn lại");
+                b= prompt("nhập vào số đoán");
+
+            } else if (z>b) {
+                alert("Số bạn chọn lớn hơn số đúng, Hãy chọn lại");
+                b= prompt("nhập vào số đoán");
+
+            }
+
+            if (b=z) {
+                alert("Chúc mừng")
+            }
+
+    }}
+</script>
