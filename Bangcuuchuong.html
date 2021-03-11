@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bangcuuchuong</title>
+    <style>
+
+        table {
+            border: 1px solid dimgray;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let source, i, j;
+        source = "<table border='1' width= '600' cellspacing= '2' cellpadding = '1'>"
+        for (i=1; i<10; i++) {
+            source = source +"<tr>";
+            for (j=2;j<10; j++) {
+                source = source + "<td>"+j+" x "+i+" = "+ i*j + "</td>";
+            }
+            source= source + "</tr>";
+        }
+        source = source + "</table>";
+        document.write(source);
+    </script>
+</body>
+</html>
