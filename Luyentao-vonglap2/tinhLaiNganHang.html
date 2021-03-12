@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fa</title>
+</head>
+<body>
+<script>
+    let amount = parseInt(prompt("So tien ban dau"));
+    let months = parseInt(prompt("So thang cho vay"));
+    let intRate = parseInt(prompt("Lai xuat hang thang (don vi:%/nam)"));
+    let years = months / 12;
+    let int = (amount * Math.pow(((100 + intRate)/100),years)) - amount;
+    alert(int);
+</script>
+</body>
+</html>
